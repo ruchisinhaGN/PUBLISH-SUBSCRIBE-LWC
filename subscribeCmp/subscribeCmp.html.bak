@@ -15,9 +15,6 @@
                     <div class="slds-truncate" title="BillingState">BillingState</div>
                   </th>
                   <th class="" scope="col">
-                    <div class="slds-truncate" title="Status">Status</div>
-                  </th>
-                  <th class="" scope="col">
                     <div class="slds-truncate" title="Rating">Rating</div>
                   </th>
                   <th class="" scope="col">
@@ -38,27 +35,18 @@
                         <div class="slds-truncate">{Account.BillingState}</div>
                     </th>
                     <th scope="col">
-                      <template if:true={Account.Status__c}>
-                      <div class="slds-truncate">  <lightning-icon icon-name="action:approval" alternative-text="Approved" title="Approved"></lightning-icon></div>
-                    </template>
-                    <template if:false={Account.Status__c}>
-                      <div class="slds-truncate">  <div class="slds-truncate">  <lightning-icon icon-name="action:close" alternative-text="Approved" title="Approved"></lightning-icon></div>
-                      </div>
-                    </template>
-                    </th>
-                    <th scope="col">
                         <div class="slds-truncate">{Account.Rating}</div>
                     </th>
                     <th scope="col">
                         <template if:true={strCapturedHot}>
-                            <div class=""> <lightning-icon icon-name="action:flow" alternative-text="flow" title="flow"></lightning-icon></div>
+                            <div class=""> <lightning-icon icon-name="action:approval" alternative-text="Approved" title="Approved"></lightning-icon></div>
                         </template>
                        
                         <template if:true={strCapturedWarm}>
-                          <div class=""> <lightning-icon icon-name="action:dial_in" alternative-text="dial_in" title="dial_in"></lightning-icon></div>
+                            <div class=""><lightning-icon icon-name="standard:address" alternative-text="Address" title="Address"></lightning-icon></div>
                         </template>
                         <template if:true={strCapturedCold}>
-                            <div class=""> <lightning-icon icon-name="action:freeze_user" alternative-text="freeze_user" title="freeze_user"></lightning-icon></div>
+                            <div class=""> <lightning-icon icon-name="action:preview" alternative-text="Preview" title="Preview"></lightning-icon></div>
                         </template>
                       
                            

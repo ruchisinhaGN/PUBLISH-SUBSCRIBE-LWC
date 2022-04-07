@@ -10,14 +10,13 @@ export default class SubscribeCmp extends LightningElement {
     strCapturedCold =false;
     @track accData;
     @track errorAccData;     
-    
+ 
     @track columnTable =[
         {label:'Name',fieldName:'Name',type:'text'},
         {label:'BillingCity',fieldName:'BillingCity',type:'text'},
         {label:'BillingState',fieldName:'BillingState',type:'text'},
         {label:'Rating',fieldName:'Rating',type:'text'},
         {label:'Icone',fieldName:'Icone',type:'text'},
-        {label:'Status__c',fieldName:'Status__c',type:'text'},
           
     ];
 
