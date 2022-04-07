@@ -1,0 +1,69 @@
+<template>
+   <lightning-card  title="Subscribe Component">
+        <p class="slds-p-around_medium" style="font-size:25px">
+        </p>
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-label="Example default base table of Opportunities">
+            <thead>
+                <tr class="slds-line-height_reset">
+                  <th class="" scope="col">
+                    <div class="slds-truncate" title="Name">Name</div>
+                  </th>
+                  <th class="" scope="col">
+                    <div class="slds-truncate" title="BillingCity">BillingCity</div>
+                  </th>
+                  <th class="" scope="col">
+                    <div class="slds-truncate" title="BillingState">BillingState</div>
+                  </th>
+                  <th class="" scope="col">
+                    <div class="slds-truncate" title="Rating">Rating</div>
+                  </th>
+                  <th class="" scope="col">
+                    <div class="slds-truncate" title="Icone">Icone</div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+            <template for:each={accData} for:item="Account">
+                <tr class="slds-hint-parent" key={Account.id}>
+                    <th scope="col">
+                        <div class="slds-truncate">{Account.Name}</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">{Account.BillingCity}</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">{Account.BillingState}</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">{Account.Rating}</div>
+                    </th>
+                    <th scope="col">
+                        <template if:true={strCapturedHot}>
+                            <div class=""> <lightning-icon icon-name="action:approval" alternative-text="Approved" title="Approved"></lightning-icon></div>
+                        </template>
+                       
+                        <template if:true={strCapturedWarm}>
+                            <div class=""><lightning-icon icon-name="standard:address" alternative-text="Address" title="Address"></lightning-icon></div>
+                        </template>
+                        <template if:true={strCapturedCold}>
+                            <div class=""> <lightning-icon icon-name="action:preview" alternative-text="Preview" title="Preview"></lightning-icon></div>
+                        </template>
+                      
+                           
+                    </th>
+                   
+                </tr>
+              
+                 
+         
+
+
+
+
+            
+        </template>
+    </tbody>  
+    </table> 
+    </lightning-card>
+
+</template>
